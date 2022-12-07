@@ -73,4 +73,4 @@ for key in dir_dict:
         current_best = key
 
 # print the file path and the file size
-print(current_best, dir_dict[current_best])
+print("the file we should delete is", current_best.split("'")[1], "with a file size of", dir_dict[current_best])
