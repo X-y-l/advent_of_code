@@ -45,7 +45,7 @@ for line in terminal_lines:
             x = x.parent
 
 
-# prints the directory nicely
+# prints the directory nicely :)
 for pre, fill, node in RenderTree(home):
     print("%s%s" % (pre, node.name))
 print("\n")
