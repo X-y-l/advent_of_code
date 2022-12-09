@@ -18,14 +18,13 @@ for direction in directions:
         rope[0] = np.add(rope[0], heading_vects[headings.index(direction[0])])
 
         for j in range(rope_length-1):
-            diff = np.add(rope[j+1], -1*rope[j])
+            diff = np.add(rope[j+1], -rope[j])
 
             if max([abs(x) for x in diff]) > 1:
-                move = np.array([np.sign(diff[0]), np.sign(diff[1])])
+                move = -np.sign(diff)
             else:
                 move = np.array([0,0])
-            
-            rope[j+1] = np.add(rope[j+1], -1*move)
+            rope[j+1] = np.add(rope[j+1], move)
         
         visited_coords[int(rope[rope_length-1][0])][int(rope[rope_length-1][1])] = 1
 
