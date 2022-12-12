@@ -27,7 +27,7 @@ print(total_power)
 
 ################
 
-screen = list("."*40*6)
+screen = list(" "*40*6)
 cycle = 0
 sprite_pos = -39
 index = 0
@@ -39,7 +39,7 @@ while cycle < len(screen):
         sprite_pos+=40
 
     if abs(sprite_pos - cycle) <= 1:
-        screen[cycle] = "#"
+        screen[cycle] = "█"
 
     if x[index] != "noop":
         if add_num == True:
