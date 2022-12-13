@@ -11,7 +11,7 @@ monkey_targets = [[int(instructions[x].split("\n")[i][-1]) for i in [5,4]] for x
 num_inspected = [0]*num_monkeys
 
 # PART 1:
-"""
+
 num_rounds = 20
 for i in range(num_rounds):
     for j in range(num_monkeys):
@@ -24,10 +24,9 @@ for i in range(num_rounds):
 
 num_inspected.sort(reverse=True)
 print(num_inspected[0] * num_inspected[1])
-"""
 
 # PART 2:
-
+"""
 num_rounds = 10000
 lcm = 1
 for i in monkey_tests:
@@ -43,3 +42,4 @@ for i in range(num_rounds):
         monkey_items[j] = []
 num_inspected.sort(reverse=True)
 print(num_inspected[0] * num_inspected[1])
+"""
